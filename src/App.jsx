@@ -24,7 +24,7 @@ function App() {
           path="/"
           element={
             <>
-              <div id="home" className="pt-24">
+              <div id="home" >
                 <HeroSection />
               </div>
               <div id="about-us">
