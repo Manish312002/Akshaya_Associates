@@ -44,7 +44,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative w-screen h-auto min-h-screen overflow-hidden bg-white flex flex-col justify-between">
+    <div className="relative w-screen h-auto min-h-screen overflow-y-auto mt-16">
       <AnimatePresence initial={false} custom={1}>
         <motion.div
           key={currentIndex}
@@ -60,7 +60,7 @@ const HeroSlider = () => {
             <img
               src={banners[currentIndex]}
               alt={`Banner ${currentIndex + 1}`}
-              className="w-full h-full object-cover"
+              className="max-w-full h-auto object-cover"
             />
           </div>
         </motion.div>
@@ -71,10 +71,9 @@ const HeroSlider = () => {
         {banners.map((_, index) => (
           <motion.div
             key={index}
-            className={`h-2 w-2 sm:h-3 sm:w-3 rounded-full cursor-pointer transition-colors duration-300 ${
+            className={`h-2 md:h-3 w-2 md:w-3 rounded-full cursor-pointer ${
               currentIndex === index ? 'bg-white' : 'bg-gray-400'
             }`}
-            
             animate={{
               scale: currentIndex === index ? 1.2 : 1,
               opacity: currentIndex === index ? 1 : 0.7,
