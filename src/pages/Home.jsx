@@ -44,7 +44,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative w-screen h-auto min-h-screen overflow-y-auto mt-[24px]">
+    <div className="relative w-screen h-auto min-h-screen overflow-y-auto mt-[30px]">
       <AnimatePresence initial={false} custom={1}>
         <motion.div
           key={currentIndex}
