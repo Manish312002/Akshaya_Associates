@@ -120,7 +120,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center p-2 relative">
         {/* Logo */}
-        <div className="flex items-center min-w-[24px] min-h-[2px]">
+        <div className="flex items-center min-w-[24px] min-h-[24px]">
           <img
             src="/assets/logo.png"
             alt="Logo"
