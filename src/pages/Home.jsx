@@ -44,7 +44,9 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative w-screen h-auto min-h-screen overflow-y-auto mt-[60px]">
+    <>
+    <div className='mt-16'>
+    <div className="relative w-full my-auto overflow-hidden shadow-lg">
       <AnimatePresence initial={false} custom={1}>
         <motion.div
           key={currentIndex}
@@ -54,7 +56,7 @@ const HeroSlider = () => {
           animate="center"
           exit="exit"
           transition={transition}
-          className="w-full h-full"
+          className="w-full h-full object-cover"
         >
           <div className="w-full flex justify-center items-center">
             <img
@@ -67,7 +69,7 @@ const HeroSlider = () => {
       </AnimatePresence>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-8 left-0 right-0  justify-center space-x-2 z-10 px-4 hidden md:flex">
+      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
         {banners.map((_, index) => (
           <motion.div
             key={index}
@@ -83,6 +85,8 @@ const HeroSlider = () => {
         ))}
       </div>
     </div>
+    </div>
+    </>
   );
 };
 
