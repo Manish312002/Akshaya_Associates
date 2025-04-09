@@ -112,19 +112,19 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+      className={`fixed w-full top-0 z-50 start-0 transition-all duration-300 ${
         isScrolled
           ? "bg-orange-600 text-white shadow-lg"
           : "bg-white text-black"
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center p-2 relative">
+      <div className="container flex flex-wrap justify-between items-center mx-auto p-4">
         {/* Logo */}
-        <div className="flex items-center min-w-[24px] min-h-[24px]">
+        <div className="flex items-center h-10">
           <img
-            src="/assets/logo.png"
+            src="/assets/logo.png"  
             alt="Logo"
-            className="h-16 w-auto object-contain"
+            className="h-16 "
             // style={{
             //   minWidth: "64px",
             //   minHeight: "64px",
